@@ -69,6 +69,22 @@
   const secondHand = document.querySelector('.second-hand');
   const minsHand = document.querySelector('.minute-hand');
   const hourHand = document.querySelector('.hour-hand');   
+  var x;
+  const trams = document.querySelector(`.clock`);
+  function changecolors() {
+    x = 1;
+    setInterval(change, 1000);
+  }
+
+  function change() {
+    if (x === 1) {
+       trams.style.borderColor = `blue`;
+        x = 2;
+    } else {
+         trams.style.borderColor = `red`;
+        x = 1;
+    }
+       }      
         
         function setColor()
         {
@@ -105,7 +121,7 @@
   setInterval(setDate, 1000);
         
   setDate();
-   
+  changecolors();
        
         
     </script>
